@@ -3,150 +3,589 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Museum Outside the Museum — Hidden Stories of Ujjain</title>
-<meta name="description" content="A virtual museum of ordinary things: eight interpretive exhibits inspired by the everyday market culture of Ujjain. Single-file submission. All artwork original.">
+<title>The Museum Outside the Museum — Five Everyday Artists</title>
+<meta name="description" content="A museum hallway of everyday art: the chaiwala, flower seller, tailor, kulfi seller and bangle seller. Scroll the hallway, open each exhibit.">
 <style>
 :root{
-  --cream:#f3ead8; --cream2:#ece0c6; --panel:#faf5ea; --ink:#26221c;
-  --muted:#6d655a; --terra:#a85638; --terra-deep:#8c452c; --line:#d3c4a3;
-  --card:#f8f2e4;
+  --wall:#23201b; --wall2:#2a261f; --wall-line:#3a342a;
+  --floor:#5d4227; --floor2:#4a3319;
+  --gold:#c9a227; --gold-deep:#9a7a1c; --gold-soft:#e6cf87;
+  --parchment:#f4ecda; --parchment2:#e9dcbf;
+  --ink:#241f18; --ink-soft:#4d463a; --muted:#a89c86;
+  --spot:rgba(255,226,150,.14);
+  --card-shadow:0 24px 60px rgba(0,0,0,.55);
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--cream);color:var(--ink);
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--wall);color:#efe7d6;
   font-family:Georgia,'Palatino Linotype','Times New Roman',serif;line-height:1.55}
-.topbar{border-bottom:1px solid var(--line);background:var(--cream2)}
-.topbar div{max-width:1080px;margin:0 auto;padding:8px 20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
-  font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:11px;letter-spacing:.14em;color:var(--muted)}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-header.masthead{padding:34px 0 10px}
-.masthead .no{font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:12px;letter-spacing:.18em;color:var(--terra-deep)}
-h1{font-size:clamp(34px,5.4vw,58px);line-height:1.04;margin:10px 0 6px;font-weight:600;letter-spacing:-.01em}
-.sub{font-size:clamp(15px,2vw,19px);color:#3d372e;max-width:62ch;margin:0}
-.rule{border:0;border-top:2px solid var(--ink);margin:22px 0 0}
-.rule.thin{border-top:1px solid var(--line)}
-.intro{display:grid;grid-template-columns:1.4fr 1fr;gap:26px;padding:20px 0 6px}
-.intro p{margin:0 0 12px;font-size:15.5px}
-.intro .note{background:var(--panel);border:1px solid var(--line);padding:14px 16px;font-size:13.5px}
-.intro .note b{color:var(--terra-deep)}
-.howto{font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:12.5px;color:var(--muted);padding:6px 0 0}
-h2.section{font-size:22px;margin:26px 0 4px;font-weight:600}
-.section-sub{margin:0 0 14px;color:var(--muted);font-size:14px;font-style:italic}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding-bottom:8px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:3px;overflow:hidden;cursor:pointer;
-  transition:border-color .15s ease;text-align:left;padding:0;font:inherit;color:inherit;width:100%}
-.card:hover,.card:focus-visible{border-color:var(--terra-deep);outline:2px solid var(--terra-deep);outline-offset:2px}
-.card .thumb{aspect-ratio:4/3;background:#e7dabf;border-bottom:1px solid var(--line);display:block}
-.card .thumb svg{display:block;width:100%;height:100%}
-.card .body{padding:10px 12px 12px}
-.card .num{font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:11px;letter-spacing:.16em;color:var(--terra-deep)}
-.card h3{margin:4px 0 2px;font-size:16.5px;line-height:1.25;font-weight:600}
-.card .loc{font-size:12.5px;color:var(--muted);font-style:italic}
-footer.site{border-top:2px solid var(--ink);margin-top:26px;padding:18px 0 40px}
-footer.site h2{font-size:19px;margin:0 0 8px}
-footer.site p,footer.site li{font-size:13.5px}
-footer.site ul{margin:6px 0 12px;padding-left:20px}
-.sources{display:grid;grid-template-columns:1fr 1fr;gap:4px 26px}
-/* Overlay */
-.overlay{position:fixed;inset:0;background:rgba(38,34,28,.62);display:none;padding:18px;z-index:50;overflow:auto}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:repeating-linear-gradient(90deg,transparent 0 119px,rgba(255,255,255,.022) 119px 121px)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px;position:relative;z-index:1}
+
+/* ---------- entrance ---------- */
+.topbar{border-bottom:1px solid var(--wall-line);background:#1c1915}
+.topbar div{max-width:1120px;margin:0 auto;padding:9px 22px;display:flex;justify-content:center;
+  font-family:'Segoe UI',system-ui,Arial,sans-serif;
+  font-size:11px;letter-spacing:.16em;color:var(--muted)}
+.entrance{text-align:center;padding:64px 0 30px;position:relative}
+.entrance .pill{display:inline-block;font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:12px;
+  letter-spacing:.22em;color:var(--gold-soft);border:1px solid var(--gold-deep);
+  padding:7px 18px;border-radius:999px}
+.entrance h1{font-size:clamp(38px,6vw,72px);line-height:1.05;margin:22px auto 10px;max-width:18ch;
+  font-weight:600;color:#f6efdd}
+.entrance h1 em{color:var(--gold-soft);font-style:italic}
+.entrance .sub{font-size:clamp(15px,2vw,19px);color:#cfc3ab;max-width:60ch;margin:0 auto}
+.cols{display:flex;justify-content:center;gap:26px;margin:34px auto 0;max-width:900px}
+.col{flex:1;max-width:120px;height:150px;border-left:10px solid #38322a;border-right:10px solid #38322a;
+  border-top:14px solid #453d31;border-bottom:14px solid #453d31;position:relative;opacity:.9}
+.col::after{content:"";position:absolute;inset:14px 6px;background:repeating-linear-gradient(90deg,#2c2721 0 8px,#38322a 8px 12px)}
+.door{flex:1.4;max-width:280px;border:3px solid var(--gold-deep);background:#191611;
+  display:flex;flex-direction:column;justify-content:center;gap:8px;padding:22px 12px}
+.door b{font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:11px;letter-spacing:.24em;color:var(--gold-soft)}
+.door span{font-style:italic;color:#cfc3ab;font-size:15px}
+.scrollcue{margin:30px auto 0;font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:12px;
+  letter-spacing:.2em;color:var(--muted)}
+.scrollcue .arrow{display:block;font-size:26px;color:var(--gold-soft);margin-top:4px}
+
+/* ---------- hallway nav dots ---------- */
+.hallnav{position:fixed;right:14px;top:50%;transform:translateY(-50%);z-index:20;
+  display:flex;flex-direction:column;gap:10px}
+.hallnav a{width:34px;height:34px;border-radius:50%;border:1px solid var(--wall-line);
+  background:#1c1915;color:var(--muted);text-decoration:none;display:flex;align-items:center;
+  justify-content:center;font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:12px}
+.hallnav a:hover,.hallnav a:focus-visible{border-color:var(--gold);color:var(--gold-soft);outline:none}
+
+/* ---------- exhibit hall ---------- */
+.exhibit{min-height:100vh;display:flex;align-items:center;padding:70px 0 40px;
+  border-top:1px solid var(--wall-line);position:relative}
+.exhibit::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:min(560px,80vw);height:340px;pointer-events:none;
+  background:linear-gradient(to bottom,var(--spot),transparent 75%);
+  clip-path:polygon(42% 0,58% 0,100% 100%,0 100%)}
+.exhibit-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;width:100%}
+.exhibit.flip .exhibit-inner{grid-template-columns:.85fr 1.15fr}
+.exhibit.flip .frame-block{order:2}
+.frame-block{text-align:center}
+.frame{background:#14110d;border:14px solid #6d5a2e;outline:3px solid var(--gold-deep);
+  outline-offset:-14px;box-shadow:var(--card-shadow);cursor:pointer;padding:0;
+  font:inherit;color:inherit;width:100%}
+.frame:hover{outline-color:var(--gold)}
+.frame:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.frame svg{display:block;width:100%;height:auto}
+.placard{background:var(--parchment);color:var(--ink);padding:26px 28px 24px;position:relative;
+  box-shadow:var(--card-shadow);border-top:6px solid var(--gold-deep)}
+.placard::before{content:"";position:absolute;top:-34px;left:50%;width:2px;height:34px;background:#6d5a2e}
+.placard .num{font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:12px;
+  letter-spacing:.22em;color:#8c6d1f}
+.placard h2{margin:6px 0 2px;font-size:clamp(26px,3.4vw,36px);line-height:1.12}
+.placard .role{font-style:italic;color:#7a5c17;font-size:16px;margin:0 0 10px}
+.placard .art{font-size:15.5px;margin:0 0 16px}
+.openbtn{font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:14px;letter-spacing:.06em;
+  background:#241f18;color:#f4ecda;border:1px solid #241f18;padding:11px 22px;cursor:pointer}
+.openbtn:hover{background:#8c6d1f;border-color:#8c6d1f}
+.floorband{height:56px;background:linear-gradient(to bottom,#6b4c2b,#3c2812);
+  border-top:3px solid #2b2013;position:relative}
+.floorband::after{content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(90deg,transparent 0 79px,rgba(0,0,0,.35) 79px 81px)}
+
+/* ---------- footer ---------- */
+footer.site{background:#1a1713;border-top:1px solid var(--wall-line);padding:40px 0 54px}
+footer.site h2{font-size:22px;margin:0 0 6px;color:#f0e7d2}
+footer.site p{color:#b3a78e;font-size:14.5px;max-width:70ch;margin:0 0 10px}
+
+/* ---------- overlay ---------- */
+.overlay{position:fixed;inset:0;background:rgba(12,10,8,.78);display:none;z-index:50;
+  overflow:auto;padding:22px}
 .overlay.open{display:block}
-.sheet{max-width:980px;margin:2vh auto;background:var(--panel);border:1px solid var(--line);border-radius:4px;overflow:hidden}
-.sheet-top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--line);background:var(--cream2)}
-.sheet-top .num{font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:12px;letter-spacing:.18em;color:var(--terra-deep)}
-.sheet-nav{display:flex;gap:8px;align-items:center}
-.btn{font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:13px;border:1px solid var(--terra-deep);background:transparent;color:var(--terra-deep);
-  padding:6px 12px;border-radius:3px;cursor:pointer}
-.btn:hover{background:var(--terra-deep);color:#fff}
-.btn.ghost{border-color:var(--line);color:var(--muted)}
-.btn.ghost:hover{border-color:var(--terra-deep);color:var(--terra-deep);background:transparent}
-.sheet-main{display:grid;grid-template-columns:1.05fr 1fr;gap:0}
-.artefact{background:#e7dabf;border-right:1px solid var(--line);padding:18px;display:flex;flex-direction:column;gap:10px}
-.artefact svg{width:100%;height:auto;display:block;border:1px solid var(--line);background:#f6efdd}
-.artefact .cap{font-size:12.5px;color:var(--muted);font-style:italic}
-.blocks{padding:18px 20px 20px}
-.blocks h3{margin:0 0 2px;font-size:24px;line-height:1.15}
-.blocks .loc{font-style:italic;color:var(--muted);font-size:13.5px;margin:0 0 12px}
-.blk{border-top:1px solid var(--line);padding:10px 0 12px}
-.blk .k{font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:11px;letter-spacing:.18em;color:var(--terra-deep);margin-bottom:4px}
+.sheet{max-width:1020px;margin:2vh auto;background:var(--parchment);color:var(--ink);
+  border-top:8px solid var(--gold-deep);box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.sheet-top{display:flex;justify-content:space-between;align-items:center;gap:10px;
+  padding:12px 18px;border-bottom:1px solid #d3c4a3;background:var(--parchment2);flex-wrap:wrap}
+.sheet-top .num{font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:12px;
+  letter-spacing:.2em;color:#8c6d1f}
+.sheet-nav{display:flex;gap:8px}
+.btn{font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:13px;cursor:pointer;
+  border:1px solid #8c6d1f;background:transparent;color:#6d5515;padding:7px 14px}
+.btn:hover{background:#8c6d1f;color:#fff}
+.sheet-main{display:grid;grid-template-columns:1fr 1fr}
+.artefact{background:#e4d6b4;padding:22px;border-right:1px solid #d3c4a3}
+.artefact .inframe{border:10px solid #6d5a2e;outline:2px solid #9a7a1c;outline-offset:-10px;background:#14110d}
+.artefact svg{display:block;width:100%;height:auto}
+.artefact .cap{font-size:12.5px;color:#6d655a;font-style:italic;margin-top:10px}
+.blocks{padding:24px 26px 26px}
+.blocks h3{margin:0;font-size:30px;line-height:1.15}
+.blocks .role{font-style:italic;color:#7a5c17;margin:2px 0 12px}
+.blk{border-top:1px solid #d3c4a3;padding:12px 0}
+.blk .k{font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:11px;letter-spacing:.2em;
+  color:#8c6d1f;margin-bottom:4px}
 .blk p{margin:0;font-size:14.5px}
-.blk.q p{font-size:16px;font-style:italic}
-.credit{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px;margin-top:4px}
-.credit b{color:#4c463c}
-@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.intro{grid-template-columns:1fr}.sheet-main{grid-template-columns:1fr}.artefact{border-right:0;border-bottom:1px solid var(--line}}}
-@media(max-width:520px){.grid{grid-template-columns:1fr}.sources{grid-template-columns:1fr}}
-@media print{.overlay{position:static;display:block;padding:0;background:none}.sheet{break-inside:avoid;margin:0 0 16px}.sheet-top .sheet-nav,.howto,.topbar{display:none}body{background:#fff}.card{break-inside:avoid}}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.blk.quote p{font-size:17px;font-style:italic}
+.blk.think{background:#efe3c8;margin:12px -26px -26px;padding:14px 26px;border-top:1px solid #d3c4a3}
+.blk.think p{font-style:italic;font-size:15.5px}
+
+@media(max-width:900px){
+  .exhibit-inner,.exhibit.flip .exhibit-inner{grid-template-columns:1fr}
+  .exhibit.flip .frame-block{order:0}
+  .sheet-main{grid-template-columns:1fr}
+  .artefact{border-right:0;border-bottom:1px solid #d3c4a3}
+  .hallnav{display:none}
+  .cols{gap:10px}
+  .col{height:90px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
 </style>
-<noscript><style>.overlay{position:static;display:block;padding:0;background:none;margin:0 0 16px}.sheet-nav{display:none}body{padding-bottom:20px}</style></noscript>
 </head>
 <body>
-<div class="topbar"><div><span>UJJAIN &middot; MADHYA PRADESH &middot; EVERYDAY MARKET CULTURE</span><span>GALLERY I &mdash; THINGS NOT INSIDE</span></div></div>
-<div class="wrap">
-<header class="masthead">
-<div class="no">EXHIBIT FOLIO &mdash; HIDDEN STORIES OF UJJAIN</div>
-<h1>The Museum Outside the Museum</h1>
-<p class="sub">Eight ordinary things from the old city&rsquo;s lanes and bazaars &mdash; a tawa, a scale, a ledger, a glass. Select any object to open its record.</p>
-<hr class="rule">
+<div class="topbar"><div><span>GALLERY I &ndash; V</span></div></div>
+
+<header class="entrance wrap">
+  <span class="pill">FIVE SELLERS &middot; FIVE ARTISTS &middot; FIVE EVERYDAY STORIES</span>
+  <h1>The Museum <em>Outside</em> the Museum</h1>
+  <p class="sub">No marble halls, no glass cases &mdash; the greatest gallery is the street itself.
+  Walk down the hallway. Each doorway opens onto an artist you pass every day.</p>
+  <div class="cols" aria-hidden="true">
+    <div class="col"></div>
+    <div class="door"><b>TODAY&rsquo;S SHOW</b><span>&ldquo;Five Everyday Stories&rdquo;<br>Gallery I &ndash; V</span></div>
+    <div class="col"></div>
+  </div>
+  <p class="scrollcue">SCROLL DOWN THE HALLWAY<span class="arrow">&darr;</span></p>
 </header>
-<div class="intro">
-<p style="grid-column:1">A city&rsquo;s heritage lives not only in its monuments, but in the ordinary objects, gestures, and routines of its people. Each exhibit is an interpretive study inspired by Ujjain&rsquo;s everyday market culture &mdash; <b>artefact, story, interpretation, question</b>. Text is kept short so the objects stay in focus. Settings are generic; no real shop or business is depicted.</p>
-<div class="note"><b>Copyright note.</b> Photographs found online may be copyrighted, so this submission republishes none. Every image here is an original vector illustration drawn for this folio. Ledger entries and sign lettering shown are fictional and unreadable by design.</div>
-</div>
-<p class="howto">HOW TO USE &mdash; Click / tap any exhibit card. Inside: 1 Artefact &middot; 2 Story &middot; 3 Interpretation &middot; 4 Question &middot; Sources. Use &larr; &rarr; or Prev / Next to walk the gallery. Esc closes.</p>
-<h2 class="section">The Gallery</h2>
-<p class="section-sub">Eight exhibits. All ordinary. All still in use.</p>
-<main class="grid" id="gallery">
-<button class="card" data-open="ex1"><span class="thumb"><svg viewBox="0 0 200 150" role="img" aria-label="Seasoned iron tawa illustration"><rect width="200" height="150" fill="#e7dabf"/><ellipse cx="100" cy="100" rx="66" ry="30" fill="#3a352d" stroke="#26221c" stroke-width="2"/><ellipse cx="100" cy="94" rx="66" ry="30" fill="#4a4438" stroke="#26221c" stroke-width="2"/><path d="M55 92 q20 -10 45 -6 t45 4" stroke="#8c6f4d" stroke-width="1.6" fill="none"/><path d="M62 100 q25 -8 76 0" stroke="#8c6f4d" stroke-width="1.4" fill="none"/><path d="M160 92 l28 -8" stroke="#26221c" stroke-width="6" stroke-linecap="round"/><path d="M80 55 q6 -10 0 -20 q-6 -8 0 -16 M105 58 q6 -10 0 -20 q-6 -8 0 -16 M130 55 q6 -10 0 -20 q-6 -8 0 -16" stroke="#8c452c" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></span><span class="body"><span class="num">NO. 01</span><h3>The Tawa That Never Retires</h3><span class="loc">Food lane &middot; seasoned iron</span></span></button>
-<button class="card" data-open="ex2"><span class="thumb"><svg viewBox="0 0 200 150" role="img" aria-label="Cook hands kneading illustration"><rect width="200" height="150" fill="#e7dabf"/><ellipse cx="100" cy="112" rx="58" ry="26" fill="#c9b787" stroke="#26221c" stroke-width="2"/><ellipse cx="100" cy="106" rx="58" ry="26" fill="none" stroke="#26221c" stroke-width="2"/><path d="M62 106 q38 -26 76 0 q-38 14 -76 0" fill="#ece0c6" stroke="#26221c" stroke-width="2"/><path d="M55 78 q20 -18 45 -12 M145 78 q-20 -18 -45 -12" stroke="#26221c" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M70 60 q4 -8 12 -8 M130 60 q-4 -8 -12 -8" stroke="#26221c" stroke-width="5" fill="none" stroke-linecap="round"/><g fill="#8c452c"><circle cx="85" cy="40" r="2.4"/><circle cx="100" cy="32" r="2.4"/><circle cx="115" cy="40" r="2.4"/></g></svg></span><span class="body"><span class="num">NO. 02</span><h3>The Hands That Know</h3><span class="loc">Morning kitchen &middot; touch</span></span></button>
-<button class="card" data-open="ex3"><span class="thumb"><svg viewBox="0 0 200 150" role="img" aria-label="Mechanical weighing scale illustration"><rect width="200" height="150" fill="#e7dabf"/><path d="M100 25 v90" stroke="#26221c" stroke-width="3"/><path d="M55 45 h90" stroke="#26221c" stroke-width="3"/><circle cx="100" cy="45" r="5" fill="#8c452c" stroke="#26221c" stroke-width="2"/><path d="M55 45 L40 85 M55 45 L70 85 M145 45 L130 85 M145 45 L160 85" stroke="#26221c" stroke-width="1.8"/><path d="M35 85 a20 12 0 0 0 40 0 M125 85 a20 12 0 0 0 40 0" fill="#c9b787" stroke="#26221c" stroke-width="2"/><path d="M100 50 L112 78" stroke="#8c452c" stroke-width="2.4"/><path d="M70 118 h60" stroke="#26221c" stroke-width="3"/><path d="M80 118 v12 M120 118 v12" stroke="#26221c" stroke-width="2.4"/></svg></span><span class="body"><span class="num">NO. 03</span><h3>The Scale of Trust</h3><span class="loc">Provisions lane &middot; brass</span></span></button>
-<button class="card" data-open="ex4"><span class="thumb"><svg viewBox="0 0 200 150" role="img" aria-label="Wrapped parcel illustration"><rect width="200" height="150" fill="#e7dabf"/><rect x="45" y="55" width="110" height="62" fill="#b98d5e" stroke="#26221c" stroke-width="2"/><path d="M45 55 L75 86 L45 86 M155 55 L125 86 L125 55 M45 117 L75 86 M155 117 L125 86" fill="none" stroke="#26221c" stroke-width="1.4"/><path d="M100 55 v62 M45 86 h110" stroke="#8c452c" stroke-width="3"/><circle cx="100" cy="86" r="6" fill="none" stroke="#7a3d22" stroke-width="2"/><path d="M100 80 q-12 -12 -22 -8 M100 80 q12 -12 22 -8" stroke="#7a3d22" stroke-width="2" fill="none"/></svg></span><span class="body"><span class="num">NO. 04</span><h3>The Art of Wrapping</h3><span class="loc">Counter &middot; paper &amp; string</span></span></button>
-<button class="card" data-open="ex5"><span class="thumb"><svg viewBox="0 0 200 150" role="img" aria-label="Faded shop sign illustration"><rect width="200" height="150" fill="#e7dabf"/><rect x="25" y="48" width="150" height="56" fill="#6b5f4c" stroke="#26221c" stroke-width="2"/><path d="M40 68 q10 -8 20 0 t20 0 t20 0 t20 0 t20 0" stroke="#d9cba6" stroke-width="3" fill="none" opacity=".55"/><path d="M50 86 h60 M50 92 h44" stroke="#d9cba6" stroke-width="2.4" opacity=".4"/><path d="M140 48 l14 20 -14 6 Z" fill="#e7dabf" stroke="#26221c" stroke-width="1.6"/><path d="M70 104 q2 8 0 14 M110 104 q2 6 0 12" stroke="#8c452c" stroke-width="2"/><path d="M45 48 V36 M155 48 V36 M35 36 h130" stroke="#26221c" stroke-width="2"/></svg></span><span class="body"><span class="num">NO. 05</span><h3>The Sign That Outlived Its Paint</h3><span class="loc">Old bazaar &middot; wood &amp; weather</span></span></button>
-<button class="card" data-open="ex6"><span class="thumb"><svg viewBox="0 0 200 150" role="img" aria-label="Handwritten ledger illustration"><rect width="200" height="150" fill="#e7dabf"/><path d="M35 50 L100 62 L100 122 L35 110 Z" fill="#f6efdd" stroke="#26221c" stroke-width="2"/><path d="M165 50 L100 62 L100 122 L165 110 Z" fill="#ece0c6" stroke="#26221c" stroke-width="2"/><g stroke="#b9ac8e" stroke-width="2" stroke-linecap="round"><path d="M45 72 h40 M45 82 h48 M45 92 h36 M112 72 h40 M112 82 h48 M112 92 h36"/></g><path d="M150 40 L138 66" stroke="#8c452c" stroke-width="4" stroke-linecap="round"/></svg></span><span class="body"><span class="num">NO. 06</span><h3>The Book That Remembers</h3><span class="loc">Counter drawer &middot; ledger</span></span></button>
-<button class="card" data-open="ex7"><span class="thumb"><svg viewBox="0 0 200 150" role="img" aria-label="Kulfi moulds illustration"><rect width="200" height="150" fill="#e7dabf"/><path d="M45 60 h34 l-6 52 h-22 Z" fill="#9aa0a6" stroke="#26221c" stroke-width="2"/><path d="M85 60 h34 l-6 52 h-22 Z" fill="#9aa0a6" stroke="#26221c" stroke-width="2"/><ellipse cx="62" cy="60" rx="17" ry="5" fill="#c9b787" stroke="#26221c" stroke-width="1.6"/><ellipse cx="102" cy="60" rx="17" ry="5" fill="#c9b787" stroke="#26221c" stroke-width="1.6"/><path d="M150 118 q-14 -8 -14 -26 l8 -22 12 0 8 22 q0 18 -14 26" fill="#f6efdd" stroke="#26221c" stroke-width="2"/><path d="M150 70 v-18" stroke="#8c452c" stroke-width="4" stroke-linecap="round"/><path d="M35 122 h130" stroke="#26221c" stroke-width="2"/></svg></span><span class="body"><span class="num">NO. 07</span><h3>The Mould That Gives Shape</h3><span class="loc">Sweet lane &middot; kulfi moulds</span></span></button>
-<button class="card" data-open="ex8"><span class="thumb"><svg viewBox="0 0 200 150" role="img" aria-label="Steel tea glass illustration"><rect width="200" height="150" fill="#e7dabf"/><path d="M75 55 h50 l-6 62 h-38 Z" fill="#b9bec4" stroke="#26221c" stroke-width="2"/><ellipse cx="100" cy="55" rx="25" ry="7" fill="#8c452c" stroke="#26221c" stroke-width="2"/><path d="M85 62 l-3 48" stroke="#f6efdd" stroke-width="3" opacity=".7"/><path d="M90 40 q5 -8 0 -16 M105 42 q5 -8 0 -16" stroke="#8c452c" stroke-width="2.2" fill="none" stroke-linecap="round"/><ellipse cx="100" cy="122" rx="34" ry="6" fill="none" stroke="#26221c" stroke-width="1.6"/><path d="M40 130 h120" stroke="#26221c" stroke-width="2"/></svg></span><span class="body"><span class="num">NO. 08</span><h3>The Glass That Brings People Back</h3><span class="loc">Tea stall &middot; steel &amp; steam</span></span></button>
+
+<nav class="hallnav" aria-label="Exhibits">
+  <a href="#exhibit-1">1</a><a href="#exhibit-2">2</a><a href="#exhibit-3">3</a><a href="#exhibit-4">4</a><a href="#exhibit-5">5</a>
+</nav>
+
+<main>
+<!-- ============ EXHIBIT 1 : CHAIWALA ============ -->
+<section class="exhibit" id="exhibit-1" aria-label="Exhibit 1: The Chaiwala">
+  <div class="wrap exhibit-inner">
+    <div class="frame-block">
+      <button class="frame" data-open="1" aria-label="Open exhibit 1: The Chaiwala">
+        <svg viewBox="0 0 400 300" role="img" aria-label="The chaiwala pouring tea into a glass">
+          <rect width="400" height="300" fill="#3a2b1c"/>
+          <rect y="216" width="400" height="84" fill="#241a10"/>
+          <rect y="210" width="400" height="8" fill="#6b4c2b"/>
+          <circle cx="185" cy="120" r="105" fill="#c9722b" opacity=".22"/>
+          <rect x="26" y="186" width="56" height="28" rx="3" fill="#2e2a26"/>
+          <ellipse cx="54" cy="186" rx="28" ry="6" fill="#4a443c"/>
+          <ellipse cx="54" cy="200" rx="11" ry="6" fill="#e8822b"/>
+          <ellipse cx="54" cy="200" rx="5.5" ry="3" fill="#f7c948"/>
+          <rect x="34" y="164" width="40" height="22" rx="4" fill="#8f8578"/>
+          <ellipse cx="54" cy="164" rx="20" ry="4.5" fill="#6f675c"/>
+          <path d="M46 152 q6 -8 0 -15 M62 153 q6 -8 0 -15" stroke="#f4ecda" stroke-width="2.5" fill="none" opacity=".6" stroke-linecap="round"/>
+          <path d="M105 145 Q150 132 195 145 L210 214 H90 Z" fill="#8c3a2a"/>
+          <path d="M142 137 L150 151 L158 137" fill="none" stroke="#5e2318" stroke-width="3"/>
+          <line x1="150" y1="151" x2="150" y2="214" stroke="#5e2318" stroke-width="2"/>
+          <circle cx="150" cy="164" r="2.4" fill="#e6cf87"/><circle cx="150" cy="180" r="2.4" fill="#e6cf87"/><circle cx="150" cy="196" r="2.4" fill="#e6cf87"/>
+          <rect x="142" y="118" width="16" height="18" fill="#a9764b"/>
+          <circle cx="122" cy="100" r="5" fill="#c98d5f"/><circle cx="178" cy="100" r="5" fill="#c98d5f"/>
+          <circle cx="150" cy="96" r="30" fill="#c98d5f"/>
+          <path d="M120 92 q2 -34 30 -34 q28 0 30 34 q-4 -13 -13 -15 l-3 -9 -7 9 -9 -9 -7 9 -12 2 q-7 3 -9 13 z" fill="#1f1a16"/>
+          <circle cx="142" cy="98" r="2.8" fill="#1f1a16"/><circle cx="162" cy="98" r="2.8" fill="#1f1a16"/>
+          <circle cx="143" cy="98" r="1" fill="#f4ecda"/><circle cx="163" cy="98" r="1" fill="#f4ecda"/>
+          <path d="M136 90 l8 -2 M158 88 l8 2" stroke="#1f1a16" stroke-width="2" stroke-linecap="round"/>
+          <path d="M137 110 q13 -7 26 0 q-5 9 -13 9 q-8 0 -13 -9z" fill="#1f1a16"/>
+          <path d="M142 121 q8 5 16 0" stroke="#7d4a28" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M110 152 L92 176 L104 184 L122 160 z" fill="#8c3a2a"/>
+          <circle cx="97" cy="182" r="8" fill="#c98d5f"/>
+          <path d="M89 186 l-5 20 h17 l-4 -20z" fill="#e8e0cf"/>
+          <path d="M87 196 l-3 10 h13 l-2 -10z" fill="#b45a1e"/>
+          <path d="M190 150 L220 148 L219 163 L189 165 z" fill="#8c3a2a"/>
+          <circle cx="223" cy="155" r="9" fill="#c98d5f"/>
+          <rect x="228" y="118" width="56" height="44" rx="8" fill="#a09a8c"/>
+          <rect x="228" y="118" width="56" height="10" rx="5" fill="#6f675c"/>
+          <circle cx="256" cy="113" r="4.5" fill="#3a342a"/>
+          <path d="M234 118 q22 -20 44 -4" stroke="#3a342a" stroke-width="4.5" fill="none"/>
+          <path d="M282 128 L310 162" stroke="#a09a8c" stroke-width="11" stroke-linecap="round"/>
+          <path d="M310 165 C314 186 314 206 312 224" stroke="#e8a04c" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <path d="M310 165 C314 186 314 206 312 224" stroke="#f7c948" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".8"/>
+          <circle cx="312" cy="190" r="2.4" fill="#f7c948"/>
+          <path d="M288 224 h48 l-9 38 h-30 z" fill="#efe8d6"/>
+          <path d="M296 224 h32 l-3 10 h-26 z" fill="#fff" opacity=".5"/>
+          <path d="M292 240 h40 l-5 22 h-30 z" fill="#b45a1e"/>
+          <path d="M300 234 q4 -5 0 -9 M318 234 q4 -5 0 -9" stroke="#b45a1e" stroke-width="2" fill="none"/>
+          <path d="M290 208 q8 -7 2 -16 q-5 -7 3 -12" stroke="#f4ecda" stroke-width="3" fill="none" opacity=".7" stroke-linecap="round"/>
+          <path d="M326 210 q8 -7 2 -16 q-5 -7 3 -12" stroke="#f4ecda" stroke-width="3" fill="none" opacity=".45" stroke-linecap="round"/>
+          <path d="M348 232 h18 l-4 20 h-10 z" fill="#d8cdb4"/>
+          <ellipse cx="357" cy="254" rx="18" ry="4" fill="#000" opacity=".3"/>
+        </svg>
+      </button>
+    </div>
+    <div class="placard">
+      <div class="num">EXHIBIT 01</div>
+      <h2>The Chaiwala</h2>
+      <p class="role">The Alchemist of Heat</p>
+      <p class="art">My art is making the perfect cup of chai.</p>
+      <button class="openbtn" data-open="1">Open exhibit &rarr;</button>
+    </div>
+  </div>
+</section>
+<div class="floorband" aria-hidden="true"></div>
+
+<!-- ============ EXHIBIT 2 : FLOWER SELLER ============ -->
+<section class="exhibit flip" id="exhibit-2" aria-label="Exhibit 2: The Flower Seller">
+  <div class="wrap exhibit-inner">
+    <div class="frame-block">
+      <button class="frame" data-open="2" aria-label="Open exhibit 2: The Flower Seller">
+        <svg viewBox="0 0 400 300" role="img" aria-label="The flower seller stringing a half-made garland">
+          <rect width="400" height="300" fill="#22331f"/>
+          <rect y="220" width="400" height="80" fill="#1a2618"/>
+          <rect y="214" width="400" height="8" fill="#6b4c2b"/>
+          <circle cx="200" cy="120" r="105" fill="#7a9a3a" opacity=".16"/>
+          <path d="M36 212 L48 256 H122 L134 212 Z" fill="#7a4a22"/>
+          <rect x="32" y="204" width="106" height="11" rx="5" fill="#9a6234"/>
+          <circle cx="58" cy="195" r="14" fill="#e08a1e"/><circle cx="58" cy="195" r="8" fill="#f2b234"/><circle cx="58" cy="195" r="3" fill="#a85638"/>
+          <circle cx="88" cy="190" r="14" fill="#c9262e"/><circle cx="88" cy="190" r="8" fill="#e34f4f"/><circle cx="88" cy="190" r="3" fill="#7d1418"/>
+          <circle cx="117" cy="196" r="14" fill="#e9e2cf"/><circle cx="117" cy="196" r="8" fill="#fff"/><circle cx="117" cy="196" r="3" fill="#c9a227"/>
+          <path d="M150 142 Q200 130 250 142 L262 216 H138 Z" fill="#a8326a"/>
+          <path d="M150 142 q-6 38 4 74 l18 -4 q-8 -34 -4 -70 z" fill="#7d1f4d"/>
+          <path d="M192 136 L200 150 L208 136" fill="none" stroke="#e6cf87" stroke-width="2.5"/>
+          <path d="M142 202 H258" stroke="#e6cf87" stroke-width="4"/>
+          <circle cx="200" cy="60" r="12" fill="#1f1a16"/>
+          <rect x="192" y="114" width="16" height="18" fill="#b57a4e"/>
+          <circle cx="173" cy="96" r="5" fill="#d9a06b"/><circle cx="227" cy="96" r="5" fill="#d9a06b"/>
+          <circle cx="200" cy="92" r="27" fill="#d9a06b"/>
+          <path d="M173 88 q-1 -30 27 -30 q28 0 27 30 l-7 1 q3 -20 -7 -26 l-13 -4 -13 4 q-10 6 -7 26 z" fill="#1f1a16"/>
+          <circle cx="234" cy="122" r="6" fill="#1f1a16"/><circle cx="238" cy="134" r="6" fill="#1f1a16"/><circle cx="236" cy="146" r="6" fill="#1f1a16"/>
+          <circle cx="236" cy="156" r="3" fill="#e6cf87"/>
+          <circle cx="200" cy="82" r="3.2" fill="#c9262e"/>
+          <circle cx="191" cy="94" r="2.6" fill="#1f1a16"/><circle cx="209" cy="94" r="2.6" fill="#1f1a16"/>
+          <path d="M192 106 q8 6 16 0" stroke="#7d4a28" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <circle cx="173" cy="102" r="3" fill="#e6cf87"/><circle cx="227" cy="102" r="3" fill="#e6cf87"/>
+          <path d="M152 148 L132 192 L145 199 L164 152 z" fill="#a8326a"/>
+          <path d="M248 148 L268 180 L256 189 L236 152 z" fill="#a8326a"/>
+          <path d="M138 198 Q190 236 258 192" stroke="#f4ecda" stroke-width="3" fill="none"/>
+          <circle cx="148" cy="205" r="13" fill="#e08a1e"/><circle cx="148" cy="205" r="7.5" fill="#f2b234"/><circle cx="148" cy="205" r="3" fill="#a85638"/>
+          <circle cx="172" cy="216" r="13" fill="#c9262e"/><circle cx="172" cy="216" r="7.5" fill="#e34f4f"/><circle cx="172" cy="216" r="3" fill="#7d1418"/>
+          <circle cx="197" cy="221" r="13" fill="#e9e2cf"/><circle cx="197" cy="221" r="7.5" fill="#fff"/><circle cx="197" cy="221" r="3" fill="#c9a227"/>
+          <circle cx="222" cy="217" r="13" fill="#e08a1e"/><circle cx="222" cy="217" r="7.5" fill="#f2b234"/><circle cx="222" cy="217" r="3" fill="#a85638"/>
+          <circle cx="243" cy="205" r="13" fill="#c9262e"/><circle cx="243" cy="205" r="7.5" fill="#e34f4f"/><circle cx="243" cy="205" r="3" fill="#7d1418"/>
+          <path d="M245 203 L292 172" stroke="#dfe5ea" stroke-width="5" stroke-linecap="round"/>
+          <circle cx="292" cy="172" r="4.5" fill="none" stroke="#dfe5ea" stroke-width="2.5"/>
+          <circle cx="138" cy="197" r="9" fill="#d9a06b"/>
+          <circle cx="266" cy="186" r="9" fill="#d9a06b"/>
+          <path d="M292 172 Q312 196 330 210" stroke="#f4ecda" stroke-width="2.5" fill="none"/>
+          <rect x="318" y="216" width="26" height="24" rx="3" fill="#9a6234"/>
+          <path d="M318 223 h26 M318 230 h26 M318 237 h26" stroke="#f4ecda" stroke-width="2.5"/>
+          <circle cx="300" cy="248" r="13" fill="#e08a1e"/><circle cx="300" cy="248" r="7" fill="#f2b234"/>
+          <circle cx="328" cy="252" r="13" fill="#e9e2cf"/><circle cx="328" cy="252" r="7" fill="#fff"/>
+          <circle cx="352" cy="244" r="5" fill="#e34f4f"/><circle cx="288" cy="262" r="5" fill="#f2b234"/>
+        </svg>
+      </button>
+    </div>
+    <div class="placard">
+      <div class="num">EXHIBIT 02</div>
+      <h2>The Flower Seller</h2>
+      <p class="role">The Sculptor of Flowers</p>
+      <p class="art">My art is turning flowers into something beautiful.</p>
+      <button class="openbtn" data-open="2">Open exhibit &rarr;</button>
+    </div>
+  </div>
+</section>
+<div class="floorband" aria-hidden="true"></div>
+<!-- ============ EXHIBIT 3 : TAILOR ============ -->
+<section class="exhibit" id="exhibit-3" aria-label="Exhibit 3: The Tailor">
+  <div class="wrap exhibit-inner">
+    <div class="frame-block">
+      <button class="frame" data-open="3" aria-label="Open exhibit 3: The Tailor">
+        <svg viewBox="0 0 400 300" role="img" aria-label="The tailor stitching fabric at his machine">
+          <rect width="400" height="300" fill="#4a3626"/>
+          <rect y="206" width="400" height="94" fill="#3c2812"/>
+          <rect y="196" width="400" height="10" fill="#6b4c2b"/>
+          <circle cx="200" cy="110" r="105" fill="#e8c33a" opacity=".12"/>
+          <path d="M100 140 Q140 128 180 140 L190 200 H90 Z" fill="#2e5f8c"/>
+          <path d="M132 136 L140 150 L148 136" fill="none" stroke="#1b3a56" stroke-width="3"/>
+          <path d="M130 140 L124 200 M150 140 L158 200" stroke="#e8c33a" stroke-width="7" fill="none"/>
+          <path d="M124 152 l7 2 M123 164 l7 2 M122 176 l7 2 M157 152 l-7 2 M158 164 l-7 2 M159 176 l-7 2" stroke="#5a3d2b" stroke-width="1.6"/>
+          <rect x="132" y="112" width="16" height="18" fill="#8f5c39"/>
+          <circle cx="113" cy="94" r="5" fill="#b57a4e"/><circle cx="167" cy="94" r="5" fill="#b57a4e"/>
+          <circle cx="140" cy="90" r="27" fill="#b57a4e"/>
+          <path d="M113 86 q2 -30 27 -30 q25 0 27 30 q-4 -11 -11 -13 l-3 -8 -7 8 -7 -8 -7 8 -11 2 q-6 3 -8 11 z" fill="#1f1a16"/>
+          <circle cx="131" cy="92" r="2.6" fill="#1f1a16"/><circle cx="149" cy="92" r="2.6" fill="#1f1a16"/>
+          <path d="M128 103 q12 -6 24 0 q-4 8 -12 8 q-8 0 -12 -8z" fill="#1f1a16"/>
+          <path d="M133 113 q7 4 14 0" stroke="#6d3f22" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M176 146 L236 174 L230 189 L170 161 z" fill="#2e5f8c"/>
+          <circle cx="236" cy="182" r="8" fill="#b57a4e"/>
+          <path d="M104 148 L88 184 L101 190 L116 154 z" fill="#2e5f8c"/>
+          <circle cx="94" cy="189" r="8" fill="#b57a4e"/>
+          <circle cx="66" cy="192" r="6" fill="none" stroke="#cfd4d8" stroke-width="3"/>
+          <circle cx="80" cy="192" r="6" fill="none" stroke="#cfd4d8" stroke-width="3"/>
+          <path d="M72 190 L46 178 M74 194 L48 200" stroke="#cfd4d8" stroke-width="3" stroke-linecap="round"/>
+          <rect x="222" y="172" width="72" height="14" fill="#1f5f5b"/>
+          <path d="M226 179 h64" stroke="#f4ecda" stroke-width="2" stroke-dasharray="5 4"/>
+          <rect x="230" y="186" width="130" height="12" fill="#22201c"/>
+          <rect x="330" y="120" width="22" height="66" fill="#2e3330"/>
+          <rect x="246" y="114" width="106" height="24" rx="6" fill="#2e3330"/>
+          <rect x="246" y="114" width="18" height="52" fill="#4a443c"/>
+          <rect x="250" y="160" width="6" height="24" fill="#cfd4d8"/>
+          <line x1="253" y1="184" x2="253" y2="172" stroke="#8f8578" stroke-width="2"/>
+          <rect x="244" y="184" width="18" height="4" fill="#8f8578"/>
+          <circle cx="358" cy="130" r="14" fill="#14110d"/>
+          <circle cx="358" cy="130" r="5" fill="#6f675c"/>
+          <circle cx="300" cy="126" r="4" fill="#c9a227"/>
+          <rect x="312" y="96" width="16" height="18" rx="2" fill="#8c3a2a"/>
+          <path d="M320 96 q-30 20 -62 44 q-8 8 -5 20" stroke="#8c3a2a" stroke-width="2" fill="none"/>
+          <rect x="180" y="190" width="26" height="9" rx="2" fill="#f4ecda" transform="rotate(-8 180 190)"/>
+        </svg>
+      </button>
+    </div>
+    <div class="placard">
+      <div class="num">EXHIBIT 03</div>
+      <h2>The Tailor</h2>
+      <p class="role">The Architect of Clothes</p>
+      <p class="art">My art is turning fabric into clothes that fit.</p>
+      <button class="openbtn" data-open="3">Open exhibit &rarr;</button>
+    </div>
+  </div>
+</section>
+<div class="floorband" aria-hidden="true"></div>
+
+<!-- ============ EXHIBIT 4 : KULFI SELLER ============ -->
+<section class="exhibit flip" id="exhibit-4" aria-label="Exhibit 4: The Kulfi Seller">
+  <div class="wrap exhibit-inner">
+    <div class="frame-block">
+      <button class="frame" data-open="4" aria-label="Open exhibit 4: The Kulfi Seller">
+        <svg viewBox="0 0 400 300" role="img" aria-label="The kulfi seller easing a kulfi from its mould">
+          <rect width="400" height="300" fill="#274b5c"/>
+          <rect y="228" width="400" height="72" fill="#1b3542"/>
+          <circle cx="200" cy="120" r="105" fill="#9fd4e8" opacity=".18"/>
+          <circle cx="90" cy="70" r="3" fill="#cfe8f4"/><circle cx="352" cy="60" r="3" fill="#cfe8f4"/>
+          <circle cx="332" cy="130" r="2.4" fill="#cfe8f4"/><circle cx="120" cy="122" r="2.4" fill="#cfe8f4"/>
+          <rect x="28" y="178" width="112" height="62" rx="6" fill="#b03a2e"/>
+          <rect x="28" y="178" width="112" height="24" rx="6" fill="#d14f3f"/>
+          <rect x="28" y="196" width="112" height="6" fill="#7d1f16"/>
+          <path d="M40 184 l16 -4 M106 184 l14 -4" stroke="#fff" stroke-width="2.5" opacity=".7" stroke-linecap="round"/>
+          <text x="84" y="230" text-anchor="middle" font-family="Georgia,serif" font-size="21" fill="#f4ecda" font-style="italic">kulfi</text>
+          <path d="M148 192 q6 -8 0 -16 M160 194 q6 -8 0 -16" stroke="#cfe8f4" stroke-width="2.5" fill="none" opacity=".6" stroke-linecap="round"/>
+          <path d="M128 144 Q168 132 208 144 L220 232 H116 Z" fill="#e8e0cf"/>
+          <path d="M142 144 h52 l-5 88 h-42 z" fill="#5d4227"/>
+          <line x1="168" y1="144" x2="168" y2="232" stroke="#3c2812" stroke-width="2"/>
+          <circle cx="168" cy="162" r="2.4" fill="#e6cf87"/><circle cx="168" cy="180" r="2.4" fill="#e6cf87"/><circle cx="168" cy="198" r="2.4" fill="#e6cf87"/>
+          <rect x="160" y="116" width="16" height="18" fill="#a9764b"/>
+          <circle cx="140" cy="98" r="5" fill="#c98d5f"/><circle cx="196" cy="98" r="5" fill="#c98d5f"/>
+          <circle cx="168" cy="94" r="29" fill="#c98d5f"/>
+          <path d="M139 82 q-1 -29 29 -29 q30 0 29 29 l-7 1 q-1 -20 -22 -20 q-21 0 -22 20 z" fill="#f4ecda"/>
+          <path d="M152 64 l4 6 M168 62 l0 7 M184 64 l-4 6" stroke="#c9a227" stroke-width="2"/>
+          <circle cx="158" cy="96" r="2.8" fill="#1f1a16"/><circle cx="178" cy="96" r="2.8" fill="#1f1a16"/>
+          <circle cx="159" cy="96" r="1" fill="#f4ecda"/><circle cx="179" cy="96" r="1" fill="#f4ecda"/>
+          <path d="M159 108 q9 7 18 0" stroke="#7d4a28" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M132 148 L278 78 L288 90 L144 160 z" fill="#e8e0cf"/>
+          <path d="M202 150 L250 184 L244 197 L196 163 z" fill="#e8e0cf"/>
+          <path d="M260 168 l-10 56 h56 l-14 -56 z" fill="#8f8578"/>
+          <path d="M260 168 l-10 56 h12 l8 -56 z" fill="#6f675c"/>
+          <ellipse cx="288" cy="164" rx="32" ry="8" fill="#2e2a26"/>
+          <rect x="272" y="100" width="32" height="66" rx="14" fill="#f2e6c8"/>
+          <rect x="283" y="62" width="9" height="42" rx="4.5" fill="#7a4a22"/>
+          <circle cx="282" cy="120" r="3" fill="#7a9a3a"/>
+          <circle cx="294" cy="132" r="3" fill="#7a9a3a"/>
+          <circle cx="284" cy="144" r="3" fill="#a85638"/>
+          <rect x="252" y="158" width="20" height="12" rx="6" fill="#4a443c"/>
+          <rect x="304" y="158" width="20" height="12" rx="6" fill="#4a443c"/>
+          <circle cx="251" cy="190" r="9" fill="#c98d5f"/>
+          <circle cx="287" cy="80" r="9" fill="#c98d5f"/>
+          <path d="M260 122 q-10 12 -6 26 M250 116 q-13 15 -9 34" stroke="#fff" stroke-width="3" fill="none" opacity=".65" stroke-linecap="round"/>
+          <path d="M326 206 Q342 200 338 182" stroke="#fff" stroke-width="3" fill="none" opacity=".8"/>
+          <path d="M338 182 l-8 4 l7 5 z" fill="#fff" opacity=".8"/>
+          <path d="M246 150 q6 -7 0 -14 M332 150 q6 -7 0 -14" stroke="#cfe8f4" stroke-width="2.5" fill="none" opacity=".7" stroke-linecap="round"/>
+          <path d="M340 234 l-7 24 h26 l-5 -24 z" fill="#6f675c"/>
+          <path d="M346 216 l-6 20 h22 l-4 -20 z" fill="#8f8578"/>
+          <rect x="338" y="210" width="30" height="7" rx="3.5" fill="#4a443c"/>
+        </svg>
+      </button>
+    </div>
+    <div class="placard">
+      <div class="num">EXHIBIT 04</div>
+      <h2>The Kulfi Seller</h2>
+      <p class="role">The Keeper of Sweet Memories</p>
+      <p class="art">My art is making a taste people remember.</p>
+      <button class="openbtn" data-open="4">Open exhibit &rarr;</button>
+    </div>
+  </div>
+</section>
+<div class="floorband" aria-hidden="true"></div>
+
+<!-- ============ EXHIBIT 5 : BANGLE SELLER ============ -->
+<section class="exhibit" id="exhibit-5" aria-label="Exhibit 5: The Bangle Seller">
+  <div class="wrap exhibit-inner">
+    <div class="frame-block">
+      <button class="frame" data-open="5" aria-label="Open exhibit 5: The Bangle Seller">
+        <svg viewBox="0 0 400 300" role="img" aria-label="The bangle seller holding up a bangle for a customer">
+          <rect width="400" height="300" fill="#33232e"/>
+          <rect y="220" width="400" height="80" fill="#241820"/>
+          <rect y="214" width="400" height="8" fill="#6b4c2b"/>
+          <circle cx="200" cy="120" r="100" fill="#c9266a" opacity=".16"/>
+          <rect x="42" y="200" width="112" height="12" fill="#6b4c2b"/>
+          <rect x="58" y="138" width="7" height="64" fill="#9a6234"/>
+          <rect x="132" y="138" width="7" height="64" fill="#9a6234"/>
+          <g fill="none" stroke-width="7">
+            <circle cx="61" cy="152" r="14" stroke="#c9262e"/>
+            <circle cx="61" cy="180" r="14" stroke="#1f7a5b"/>
+            <circle cx="135" cy="152" r="14" stroke="#c9a227"/>
+            <circle cx="135" cy="180" r="14" stroke="#1f5fa8"/>
+          </g>
+          <rect x="168" y="196" width="10" height="18" fill="#9a6234"/>
+          <path d="M210 142 Q250 130 290 142 L300 222 H200 Z" fill="#1f7a5b"/>
+          <path d="M242 138 L250 152 L258 138" fill="none" stroke="#e6cf87" stroke-width="2.5"/>
+          <circle cx="244" cy="160" r="2" fill="#e6cf87"/><circle cx="250" cy="164" r="2" fill="#e6cf87"/><circle cx="256" cy="160" r="2" fill="#e6cf87"/>
+          <path d="M216 142 q-4 40 6 80 l16 -4 q-8 -36 -6 -76 z" fill="#c96a1e"/>
+          <rect x="242" y="112" width="16" height="18" fill="#b57a4e"/>
+          <circle cx="223" cy="94" r="5" fill="#d9a06b"/><circle cx="277" cy="94" r="5" fill="#d9a06b"/>
+          <circle cx="250" cy="90" r="27" fill="#d9a06b"/>
+          <path d="M222 78 q-4 -34 28 -34 q32 0 28 34 l-9 1 q3 -24 -19 -24 q-22 0 -19 24 z" fill="#c96a1e"/>
+          <path d="M228 76 q-2 -18 22 -18 q24 0 22 18 l-6 1 q1 -11 -16 -11 q-17 0 -16 11 z" fill="#1f1a16"/>
+          <circle cx="250" cy="80" r="3.2" fill="#c9262e"/>
+          <circle cx="241" cy="92" r="2.6" fill="#1f1a16"/><circle cx="259" cy="92" r="2.6" fill="#1f1a16"/>
+          <path d="M242 104 q8 6 16 0" stroke="#7d4a28" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <circle cx="223" cy="100" r="3.4" fill="#e6cf87"/><circle cx="277" cy="100" r="3.4" fill="#e6cf87"/>
+          <path d="M286 148 L322 152 L320 167 L284 163 z" fill="#1f7a5b"/>
+          <circle cx="326" cy="158" r="8" fill="#d9a06b"/>
+          <circle cx="340" cy="140" r="17" fill="none" stroke="#c9262e" stroke-width="8"/>
+          <circle cx="340" cy="140" r="17" fill="none" stroke="#fff" stroke-width="1.6" stroke-dasharray="3 7" opacity=".7"/>
+          <path d="M334 152 l4 -10 M344 153 l1 -11" stroke="#d9a06b" stroke-width="5" stroke-linecap="round"/>
+          <path d="M214 150 L162 200 L172 211 L224 160 z" fill="#1f7a5b"/>
+          <circle cx="165" cy="206" r="8" fill="#d9a06b"/>
+          <path d="M176 196 l8 10 M184 190 l8 10 M192 184 l8 10" stroke="#c9262e" stroke-width="3.5"/>
+          <path d="M180 199 l8 10 M188 193 l8 10" stroke="#c9a227" stroke-width="3.5"/>
+          <rect x="40" y="228" width="76" height="26" rx="3" fill="#7a4a22"/>
+          <rect x="40" y="228" width="76" height="9" rx="3" fill="#9a6234"/>
+          <circle cx="60" cy="225" r="9" fill="none" stroke="#e08a1e" stroke-width="5"/>
+          <circle cx="82" cy="225" r="9" fill="none" stroke="#a832a8" stroke-width="5"/>
+          <rect x="288" y="228" width="76" height="26" rx="3" fill="#7a4a22"/>
+          <rect x="288" y="228" width="76" height="9" rx="3" fill="#9a6234"/>
+          <circle cx="310" cy="225" r="9" fill="none" stroke="#1f5fa8" stroke-width="5"/>
+          <circle cx="332" cy="225" r="9" fill="none" stroke="#1f7a5b" stroke-width="5"/>
+        </svg>
+      </button>
+    </div>
+    <div class="placard">
+      <div class="num">EXHIBIT 05</div>
+      <h2>The Bangle Seller</h2>
+      <p class="role">The Artist of Colour</p>
+      <p class="art">My art is helping people find the right colours.</p>
+      <button class="openbtn" data-open="5">Open exhibit &rarr;</button>
+    </div>
+  </div>
+</section>
+<div class="floorband" aria-hidden="true"></div>
 </main>
+
 <footer class="site">
-<h2>Colophon &amp; sources</h2>
-<p>Single-file submission for Canvas upload. Works offline; no external images, fonts, or scripts. All illustrations are original vectors drawn for this folio &mdash; no third-party photograph is republished. If printed to PDF, each exhibit record follows on its own page.</p>
-<div class="sources">
-<ul>
-<li>Everyday market observation &mdash; generic old-city settings; no real shop or business depicted.</li>
-<li>District Gazetteer, Ujjain &mdash; old-city bazaars, food trade, and commerce (general context).</li>
-</ul>
-<ul>
-<li>MP Tourism &mdash; Ujjain old city and bazaar quarters (general context).</li>
-<li>Accuracy: interpretive exhibits. No dates, shop names, or claims about actual businesses are made.</li>
-</ul>
-</div>
-<p style="color:var(--muted);font-size:12.5px">Interpretations and questions are the student&rsquo;s own. Ledger entries and sign lettering are fictional and unreadable by design; no personal or financial information is shown.</p>
+  <div class="wrap">
+    <h2>You have reached the end of the hallway.</h2>
+    <p>Five sellers. Five artists. Five everyday stories. This museum has no closing time &mdash;
+    it opens every morning on your street, at the corner stall, beside the market gate.
+    All five illustrations on this page are original works drawn for this gallery.</p>
+  </div>
 </footer>
+
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+  <div class="sheet">
+    <div class="sheet-top">
+      <span class="num" id="sheet-num">EXHIBIT 01</span>
+      <div class="sheet-nav">
+        <button class="btn" id="prevBtn">&larr; Prev</button>
+        <button class="btn" id="nextBtn">Next &rarr;</button>
+        <button class="btn" id="closeBtn">Close &times;</button>
+      </div>
+    </div>
+    <div class="sheet-main">
+      <div class="artefact">
+        <div class="inframe" id="sheet-art"></div>
+        <div class="cap" id="sheet-cap"></div>
+      </div>
+      <div class="blocks">
+        <h3 id="sheet-title"></h3>
+        <p class="role" id="sheet-role"></p>
+        <div class="blk quote"><div class="k">THE ARTIST SAYS</div><p id="sheet-says"></p></div>
+        <div class="blk"><div class="k">THE STORY</div><p id="sheet-story"></p></div>
+        <div class="blk"><div class="k">TOOLS OF THE TRADE</div><p id="sheet-tools"></p></div>
+        <div class="blk"><div class="k">SPECIAL SKILL</div><p id="sheet-skill"></p></div>
+        <div class="blk think"><div class="k">THINK ABOUT</div><p id="sheet-think"></p></div>
+      </div>
+    </div>
+  </div>
 </div>
-<!-- EXHIBIT OVERLAYS -->
-<div class="overlay" id="ex1" role="dialog" aria-modal="true" aria-label="Exhibit 1"><div class="sheet"><div class="sheet-top"><span class="num">NO. 01 &mdash; FOOD LANE</span><div class="sheet-nav"><button class="btn ghost" data-prev>&larr; Prev</button><button class="btn ghost" data-next>Next &rarr;</button><button class="btn" data-close>Close &times;</button></div></div><div class="sheet-main"><div class="artefact"><svg viewBox="0 0 400 300" role="img" aria-label="Seasoned tawa large illustration"><rect width="400" height="300" fill="#f6efdd"/><rect x="14" y="14" width="372" height="272" fill="none" stroke="#26221c" stroke-width="1.4"/><ellipse cx="200" cy="205" rx="132" ry="52" fill="#3a352d" stroke="#26221c" stroke-width="2.5"/><ellipse cx="200" cy="196" rx="132" ry="52" fill="#4a4438" stroke="#26221c" stroke-width="2.5"/><path d="M100 192 q45 -22 100 -14 t100 10" stroke="#8c6f4d" stroke-width="2.4" fill="none"/><path d="M115 208 q50 -16 170 0" stroke="#8c6f4d" stroke-width="2" fill="none"/><path d="M90 182 q60 -18 130 -8" stroke="#6e6250" stroke-width="1.6" fill="none"/><path d="M326 196 l46 -14" stroke="#26221c" stroke-width="10" stroke-linecap="round"/><path d="M160 130 q10 -18 0 -36 q-8 -14 0 -28 M205 135 q10 -18 0 -36 q-8 -14 0 -28 M250 130 q10 -18 0 -36 q-8 -14 0 -28" stroke="#8c452c" stroke-width="3.4" fill="none" stroke-linecap="round"/></svg><span class="cap">Artefact: an iron tawa, blackened and smooth from years of batter, oil, and flame. Original illustration.</span></div><div class="blocks"><h3>The Tawa That Never Retires</h3><p class="loc">Old-city food lane &middot; a generic working stall</p><div class="blk"><div class="k">1 &mdash; THE ARTEFACT</div><p>An iron tawa seasoned over years of daily use. Its scratches are its service record; it is never scrubbed raw.</p></div><div class="blk"><div class="k">2 &mdash; THE STORY</div><p>Street stalls across old Ujjain cook on iron tawas kept in use for years. Cooks treat the seasoned surface itself as part of the flavour.</p></div><div class="blk"><div class="k">3 &mdash; THE INTERPRETATION</div><p>The tool has outlasted menus, prices, perhaps the stall itself. It remembers every hand that held its handle.</p></div><div class="blk q"><div class="k">4 &mdash; THE QUESTION</div><p>When does a tool become part of someone&rsquo;s identity?</p></div><div class="credit"><b>Sources:</b> everyday market observation (generic setting); District Gazetteer, Ujjain &mdash; food trade (general). Interpretive exhibit; no real business depicted. <b>Medium:</b> original vector illustration.</div></div></div></div></div>
-<div class="overlay" id="ex2" role="dialog" aria-modal="true" aria-label="Exhibit 2"><div class="sheet"><div class="sheet-top"><span class="num">NO. 02 &mdash; MORNING KITCHEN</span><div class="sheet-nav"><button class="btn ghost" data-prev>&larr; Prev</button><button class="btn ghost" data-next>Next &rarr;</button><button class="btn" data-close>Close &times;</button></div></div><div class="sheet-main"><div class="artefact"><svg viewBox="0 0 400 300" role="img" aria-label="Cook hands large illustration"><rect width="400" height="300" fill="#f6efdd"/><rect x="14" y="14" width="372" height="272" fill="none" stroke="#26221c" stroke-width="1.4"/><ellipse cx="200" cy="228" rx="118" ry="46" fill="#c9b787" stroke="#26221c" stroke-width="2.5"/><ellipse cx="200" cy="218" rx="118" ry="46" fill="none" stroke="#26221c" stroke-width="2.5"/><path d="M120 218 q80 -52 160 0 q-80 28 -160 0" fill="#ece0c6" stroke="#26221c" stroke-width="2.5"/><path d="M105 170 q45 -38 95 -26 M295 170 q-45 -38 -95 -26" stroke="#26221c" stroke-width="13" fill="none" stroke-linecap="round"/><path d="M135 130 q8 -16 26 -16 M265 130 q-8 -16 -26 -16" stroke="#26221c" stroke-width="9" fill="none" stroke-linecap="round"/><g fill="#8c452c"><circle cx="168" cy="80" r="4"/><circle cx="200" cy="66" r="4"/><circle cx="232" cy="80" r="4"/><circle cx="184" cy="96" r="3"/><circle cx="216" cy="96" r="3"/></g></svg><span class="cap">Artefact: a cook&rsquo;s hands at work &mdash; mixing, shaping, sprinkling, judging by touch. Face never shown.</span></div><div class="blocks"><h3>The Hands That Know</h3><p class="loc">Morning kitchen &middot; touch and repetition</p><div class="blk"><div class="k">1 &mdash; THE ARTEFACT</div><p>Hands mixing, shaping, sprinkling, judging texture by touch alone. The knowledge lives in the fingers.</p></div><div class="blk"><div class="k">2 &mdash; THE STORY</div><p>In old-city kitchens, measures live in the body: a pinch, a handful, dough judged by feel. Recipes travel by watching, not by writing.</p></div><div class="blk"><div class="k">3 &mdash; THE INTERPRETATION</div><p>What was never written down can never be looked up. This knowledge exists only while hands keep repeating it.</p></div><div class="blk q"><div class="k">4 &mdash; THE QUESTION</div><p>Can knowledge disappear even when a recipe survives?</p></div><div class="credit"><b>Sources:</b> everyday kitchen observation (generic setting); Gazetteer &mdash; food culture (general). Interpretive exhibit. <b>Medium:</b> original vector illustration.</div></div></div></div></div>
-<div class="overlay" id="ex3" role="dialog" aria-modal="true" aria-label="Exhibit 3"><div class="sheet"><div class="sheet-top"><span class="num">NO. 03 &mdash; PROVISIONS LANE</span><div class="sheet-nav"><button class="btn ghost" data-prev>&larr; Prev</button><button class="btn ghost" data-next>Next &rarr;</button><button class="btn" data-close>Close &times;</button></div></div><div class="sheet-main"><div class="artefact"><svg viewBox="0 0 400 300" role="img" aria-label="Weighing scale large illustration"><rect width="400" height="300" fill="#f6efdd"/><rect x="14" y="14" width="372" height="272" fill="none" stroke="#26221c" stroke-width="1.4"/><path d="M200 45 v180" stroke="#26221c" stroke-width="4"/><path d="M105 85 h190" stroke="#26221c" stroke-width="4"/><circle cx="200" cy="85" r="9" fill="#8c452c" stroke="#26221c" stroke-width="2.5"/><path d="M105 85 L75 165 M105 85 L135 165 M295 85 L265 165 M295 85 L325 165" stroke="#26221c" stroke-width="2.4"/><path d="M65 165 a40 24 0 0 0 80 0 M255 165 a40 24 0 0 0 80 0" fill="#c9b787" stroke="#26221c" stroke-width="2.5"/><path d="M200 94 L224 152" stroke="#8c452c" stroke-width="3.4"/><path d="M140 228 h120" stroke="#26221c" stroke-width="4"/><path d="M160 228 v26 M240 228 v26" stroke="#26221c" stroke-width="3"/></svg><span class="cap">Artefact: a mechanical scale &mdash; brass pans, trembling needle, weights worn smooth by handling.</span></div><div class="blocks"><h3>The Scale of Trust</h3><p class="loc">Provisions lane &middot; weighed in public</p><div class="blk"><div class="k">1 &mdash; THE ARTEFACT</div><p>A mechanical weighing scale. Goods added grain by grain until the needle rests &mdash; the customer watching throughout.</p></div><div class="blk"><div class="k">2 &mdash; THE STORY</div><p>Traditional provisions shops still weigh on mechanical scales, openly, at the counter. Every movement of the pan is visible to both sides.</p></div><div class="blk"><div class="k">3 &mdash; THE INTERPRETATION</div><p>The scale measures weight in public so that trust needs no measuring. Transparency is the mechanism.</p></div><div class="blk q"><div class="k">4 &mdash; THE QUESTION</div><p>Can trust be measured?</p></div><div class="credit"><b>Sources:</b> everyday market observation (generic setting); Gazetteer &mdash; bazaar commerce (general). Interpretive exhibit. <b>Medium:</b> original vector illustration.</div></div></div></div></div>
-<div class="overlay" id="ex4" role="dialog" aria-modal="true" aria-label="Exhibit 4"><div class="sheet"><div class="sheet-top"><span class="num">NO. 04 &mdash; THE COUNTER</span><div class="sheet-nav"><button class="btn ghost" data-prev>&larr; Prev</button><button class="btn ghost" data-next>Next &rarr;</button><button class="btn" data-close>Close &times;</button></div></div><div class="sheet-main"><div class="artefact"><svg viewBox="0 0 400 300" role="img" aria-label="Wrapped parcel large illustration"><rect width="400" height="300" fill="#f6efdd"/><rect x="14" y="14" width="372" height="272" fill="none" stroke="#26221c" stroke-width="1.4"/><rect x="80" y="105" width="240" height="130" fill="#b98d5e" stroke="#26221c" stroke-width="2.5"/><path d="M80 105 L150 170 L80 170 M320 105 L250 170 L250 105 M80 235 L150 170 M320 235 L250 170" fill="none" stroke="#26221c" stroke-width="1.8"/><path d="M200 105 v130 M80 170 h240" stroke="#8c452c" stroke-width="4.5"/><circle cx="200" cy="170" r="11" fill="none" stroke="#7a3d22" stroke-width="2.6"/><path d="M200 159 q-22 -22 -42 -14 M200 159 q22 -22 42 -14" stroke="#7a3d22" stroke-width="2.6" fill="none"/><path d="M60 250 h280" stroke="#26221c" stroke-width="2.4"/></svg><span class="cap">Artefact: a parcel in brown paper &mdash; corners folded sharp, string knotted, handed over with a tap.</span></div><div class="blocks"><h3>The Art of Wrapping</h3><p class="loc">Shop counter &middot; paper and string</p><div class="blk"><div class="k">1 &mdash; THE ARTEFACT</div><p>A purchase wrapped in brown paper: each corner folded in seconds, creases flat, string wound and knotted.</p></div><div class="blk"><div class="k">2 &mdash; THE STORY</div><p>Before printed carry bags, every counter kept paper and string. Shopkeepers wrapped parcels in one practised sequence, hundreds of times a day.</p></div><div class="blk"><div class="k">3 &mdash; THE INTERPRETATION</div><p>A small choreography performed a hundred times daily &mdash; and noticed by no one until the day it is gone.</p></div><div class="blk q"><div class="k">4 &mdash; THE QUESTION</div><p>How many small skills disappear unnoticed?</p></div><div class="credit"><b>Sources:</b> everyday market observation (generic setting); Gazetteer &mdash; bazaar commerce (general). Interpretive exhibit. <b>Medium:</b> original vector illustration.</div></div></div></div></div>
-<div class="overlay" id="ex5" role="dialog" aria-modal="true" aria-label="Exhibit 5"><div class="sheet"><div class="sheet-top"><span class="num">NO. 05 &mdash; OLD BAZAAR</span><div class="sheet-nav"><button class="btn ghost" data-prev>&larr; Prev</button><button class="btn ghost" data-next>Next &rarr;</button><button class="btn" data-close>Close &times;</button></div></div><div class="sheet-main"><div class="artefact"><svg viewBox="0 0 400 300" role="img" aria-label="Faded sign large illustration"><rect width="400" height="300" fill="#f6efdd"/><rect x="14" y="14" width="372" height="272" fill="none" stroke="#26221c" stroke-width="1.4"/><rect x="50" y="95" width="300" height="115" fill="#6b5f4c" stroke="#26221c" stroke-width="2.5"/><path d="M75 132 q18 -14 36 0 t36 0 t36 0 t36 0 t36 0" stroke="#d9cba6" stroke-width="5" fill="none" opacity=".55"/><path d="M85 162 h110 M85 176 h80" stroke="#d9cba6" stroke-width="4" opacity=".4"/><path d="M290 95 l32 44 -32 14 Z" fill="#f6efdd" stroke="#26221c" stroke-width="2"/><path d="M130 95 v-26 M270 95 v-26 M100 69 h200" stroke="#26221c" stroke-width="3"/><path d="M120 210 q4 18 0 34 M200 210 q4 14 0 28" stroke="#8c452c" stroke-width="3.4"/><text x="200" y="262" text-anchor="middle" font-size="11" letter-spacing="3" fill="#6d655a" font-family="Arial,sans-serif">LETTERING FICTITIOUS &amp; ILLEGIBLE</text></svg><span class="cap">Artefact: a wooden sign, paint cracked by sun, lettering faded past reading. Fictitious lettering by design.</span></div><div class="blocks"><h3>The Sign That Outlived Its Paint</h3><p class="loc">Old bazaar street &middot; wood and weather</p><div class="blk"><div class="k">1 &mdash; THE ARTEFACT</div><p>A hand-painted board, sun-cracked, its lettering worn past reading. Texture now, where a name used to be.</p></div><div class="blk"><div class="k">2 &mdash; THE STORY</div><p>Painted boards still hang over old-bazaar fronts, some older than the shops beneath them. Repainting is rarer than replacement &mdash; so the faded ones survive.</p></div><div class="blk"><div class="k">3 &mdash; THE INTERPRETATION</div><p>The street remembers in layers. Each faded board is a sentence the neighbourhood started and never finished.</p></div><div class="blk q"><div class="k">4 &mdash; THE QUESTION</div><p>What disappears when an old sign disappears?</p></div><div class="credit"><b>Sources:</b> everyday street observation (generic setting); Gazetteer &mdash; old bazaars (general). No real sign depicted. <b>Medium:</b> original vector illustration.</div></div></div></div></div>
-<div class="overlay" id="ex6" role="dialog" aria-modal="true" aria-label="Exhibit 6"><div class="sheet"><div class="sheet-top"><span class="num">NO. 06 &mdash; COUNTER DRAWER</span><div class="sheet-nav"><button class="btn ghost" data-prev>&larr; Prev</button><button class="btn ghost" data-next>Next &rarr;</button><button class="btn" data-close>Close &times;</button></div></div><div class="sheet-main"><div class="artefact"><svg viewBox="0 0 400 300" role="img" aria-label="Ledger large illustration"><rect width="400" height="300" fill="#f6efdd"/><rect x="14" y="14" width="372" height="272" fill="none" stroke="#26221c" stroke-width="1.4"/><path d="M60 100 L200 126 L200 246 L60 220 Z" fill="#f6efdd" stroke="#26221c" stroke-width="2.5"/><path d="M340 100 L200 126 L200 246 L340 220 Z" fill="#ece0c6" stroke="#26221c" stroke-width="2.5"/><g stroke="#b9ac8e" stroke-width="3" stroke-linecap="round"><path d="M82 142 h80 M82 160 h96 M82 178 h72 M82 196 h88 M220 142 h80 M220 160 h96 M220 178 h72 M220 196 h88"/></g><path d="M310 76 L292 122" stroke="#8c452c" stroke-width="6" stroke-linecap="round"/><text x="200" y="268" text-anchor="middle" font-size="11" letter-spacing="3" fill="#6d655a" font-family="Arial,sans-serif">ENTRIES FICTIONAL &amp; UNREADABLE</text></svg><span class="cap">Artefact: a cloth-bound ledger, soft pages, entries in fading ink. All entries fictional; nothing legible.</span></div><div class="blocks"><h3>The Book That Remembers Who Owes What</h3><p class="loc">Neighbourhood counter &middot; credit by hand</p><div class="blk"><div class="k">1 &mdash; THE ARTEFACT</div><p>A handwritten ledger of monthly accounts. Borrowing and trust, recorded in ink &mdash; entries shown here are fictional.</p></div><div class="blk"><div class="k">2 &mdash; THE STORY</div><p>Neighbourhood shops long ran monthly accounts by hand. Credit was personal: the book recorded it, the relationship guaranteed it.</p></div><div class="blk"><div class="k">3 &mdash; THE INTERPRETATION</div><p>The ledger is not about money. It is a diary of who trusted whom &mdash; a social record wearing accountant&rsquo;s clothes.</p></div><div class="blk q"><div class="k">4 &mdash; THE QUESTION</div><p>What does a ledger reveal about relationships?</p></div><div class="credit"><b>Sources:</b> everyday market observation (generic setting); Gazetteer &mdash; commerce (general). No personal data shown. <b>Medium:</b> original vector illustration.</div></div></div></div></div>
-<div class="overlay" id="ex7" role="dialog" aria-modal="true" aria-label="Exhibit 7"><div class="sheet"><div class="sheet-top"><span class="num">NO. 07 &mdash; SWEET LANE</span><div class="sheet-nav"><button class="btn ghost" data-prev>&larr; Prev</button><button class="btn ghost" data-next>Next &rarr;</button><button class="btn" data-close>Close &times;</button></div></div><div class="sheet-main"><div class="artefact"><svg viewBox="0 0 400 300" role="img" aria-label="Kulfi moulds large illustration"><rect width="400" height="300" fill="#f6efdd"/><rect x="14" y="14" width="372" height="272" fill="none" stroke="#26221c" stroke-width="1.4"/><path d="M70 120 h68 l-12 110 h-44 Z" fill="#9aa0a6" stroke="#26221c" stroke-width="2.5"/><path d="M152 120 h68 l-12 110 h-44 Z" fill="#9aa0a6" stroke="#26221c" stroke-width="2.5"/><ellipse cx="104" cy="120" rx="34" ry="10" fill="#c9b787" stroke="#26221c" stroke-width="2"/><ellipse cx="186" cy="120" rx="34" ry="10" fill="#c9b787" stroke="#26221c" stroke-width="2"/><path d="M300 240 q-30 -16 -30 -56 l16 -46 28 0 16 46 q0 40 -30 56" fill="#f6efdd" stroke="#26221c" stroke-width="2.5"/><path d="M300 138 v-36" stroke="#8c452c" stroke-width="7" stroke-linecap="round"/><path d="M50 248 h300" stroke="#26221c" stroke-width="2.5"/></svg><span class="cap">Artefact: conical kulfi moulds, dented rims &mdash; and the kulfi that slides free, glistening.</span></div><div class="blocks"><h3>The Mould That Gives a Memory Its Shape</h3><p class="loc">Sweet lane &middot; set and unmoulded daily</p><div class="blk"><div class="k">1 &mdash; THE ARTEFACT</div><p>Metal kulfi moulds filled with creamy mixture; the finished kulfi slid free, holding the mould&rsquo;s exact form.</p></div><div class="blk"><div class="k">2 &mdash; THE STORY</div><p>Kulfi set in individual metal moulds is sold across old-city sweet lanes. The mould&rsquo;s shape has barely changed across generations of vendors.</p></div><div class="blk"><div class="k">3 &mdash; THE INTERPRETATION</div><p>Taste forgets; shape remembers. The mould hands the same form to each generation and lets flavour do the rest.</p></div><div class="blk q"><div class="k">4 &mdash; THE QUESTION</div><p>If the form remains, is the tradition still the same?</p></div><div class="credit"><b>Sources:</b> everyday market observation (generic setting); Gazetteer &mdash; food trade (general). Interpretive exhibit. <b>Medium:</b> original vector illustration.</div></div></div></div></div>
-<div class="overlay" id="ex8" role="dialog" aria-modal="true" aria-label="Exhibit 8"><div class="sheet"><div class="sheet-top"><span class="num">NO. 08 &mdash; TEA STALL</span><div class="sheet-nav"><button class="btn ghost" data-prev>&larr; Prev</button><button class="btn ghost" data-next>Next &rarr;</button><button class="btn" data-close>Close &times;</button></div></div><div class="sheet-main"><div class="artefact"><svg viewBox="0 0 400 300" role="img" aria-label="Tea glass large illustration"><rect width="400" height="300" fill="#f6efdd"/><rect x="14" y="14" width="372" height="272" fill="none" stroke="#26221c" stroke-width="1.4"/><path d="M150 110 h100 l-12 128 h-76 Z" fill="#b9bec4" stroke="#26221c" stroke-width="2.5"/><ellipse cx="200" cy="110" rx="50" ry="14" fill="#8c452c" stroke="#26221c" stroke-width="2.5"/><path d="M168 124 l-6 100" stroke="#f6efdd" stroke-width="6" opacity=".7"/><path d="M182 84 q9 -14 0 -28 M206 88 q9 -14 0 -28" stroke="#8c452c" stroke-width="3.4" fill="none" stroke-linecap="round"/><ellipse cx="200" cy="244" rx="66" ry="11" fill="none" stroke="#26221c" stroke-width="2"/><path d="M90 262 h220" stroke="#26221c" stroke-width="2.5"/></svg><span class="cap">Artefact: a steel tea glass &mdash; amber pour, rising steam, passed from stall to customer and back.</span></div><div class="blocks"><h3>The Glass That Brings People Back</h3><p class="loc">Roadside tea stall &middot; washed and reused all day</p><div class="blk"><div class="k">1 &mdash; THE ARTEFACT</div><p>A small steel glass of tea, poured hot and passed across. Emptied, washed, and filled again within minutes.</p></div><div class="blk"><div class="k">2 &mdash; THE STORY</div><p>Roadside stalls serve tea in steel glasses reused all day. Regulars return to the same stall, the same glass, the same pause.</p></div><div class="blk"><div class="k">3 &mdash; THE INTERPRETATION</div><p>The glass belongs to no one and is missed by everyone. Belonging, it turns out, can be rented by the cup.</p></div><div class="blk q"><div class="k">4 &mdash; THE QUESTION</div><p>Can an ordinary object represent belonging?</p></div><div class="credit"><b>Sources:</b> everyday market observation (generic setting); Gazetteer &mdash; street life (general). Interpretive exhibit. <b>Medium:</b> original vector illustration.</div></div></div></div></div>
+
 <script>
-(function(){
-var order=['ex1','ex2','ex3','ex4','ex5','ex6','ex7','ex8'];
-var current=null,lastFocus=null;
-function open(id){lastFocus=document.activeElement;close(true);current=id;
-var el=document.getElementById(id);if(!el)return;el.classList.add('open');document.body.style.overflow='hidden';
-var c=el.querySelector('[data-close]');if(c)c.focus();}
-function close(silent){if(!current)return;var el=document.getElementById(current);if(el)el.classList.remove('open');current=null;
-if(!silent){document.body.style.overflow='';if(lastFocus&&lastFocus.focus)lastFocus.focus();}else{document.body.style.overflow='';}}
-function step(d){if(!current){open(order[0]);return;}var i=order.indexOf(current);i=(i+d+order.length)%order.length;open(order[i]);}
-document.querySelectorAll('[data-open]').forEach(function(b){b.addEventListener('click',function(){open(b.getAttribute('data-open'));});});
-document.querySelectorAll('.overlay').forEach(function(o){o.addEventListener('click',function(e){if(e.target===o)close();});
-o.querySelectorAll('[data-close]').forEach(function(b){b.addEventListener('click',function(){close();});});
-o.querySelectorAll('[data-prev]').forEach(function(b){b.addEventListener('click',function(e){e.stopPropagation();step(-1);});});
-o.querySelectorAll('[data-next]').forEach(function(b){b.addEventListener('click',function(e){e.stopPropagation();step(1);});});});
-document.addEventListener('keydown',function(e){if(!current)return;if(e.key==='Escape')close();else if(e.key==='ArrowRight')step(1);else if(e.key==='ArrowLeft')step(-1);});
-})();
+var EXHIBITS = {
+  1: { num:"EXHIBIT 01", title:"The Chaiwala", role:"The Alchemist of Heat",
+    says:"My art is making the perfect cup of chai.",
+    story:"I make chai every day, but I never get tired of it. I know when the tea is ready by looking at its colour. I know how much milk, sugar, and spices to add. Over the years, I have learned to make chai through practice, not measurements. For me, every cup is a small piece of art.",
+    tools:"Kettle, stove, strainer and glasses.", skill:"Knowing when my chai tastes just right.",
+    artwork:"The chaiwala pouring tea into a glass.",
+    think:"Can making chai every day become an art?" },
+  2: { num:"EXHIBIT 02", title:"The Flower Seller", role:"The Sculptor of Flowers",
+    says:"My art is turning flowers into something beautiful.",
+    story:"I choose flowers by their colour and freshness. I put them together to make garlands for prayers, weddings, and celebrations. My hands work quickly, but every flower has its place. The flowers may not last long, but the memories they become part of can last for years.",
+    tools:"Flowers, thread and needle.", skill:"Arranging flowers neatly and beautifully.",
+    artwork:"The flower seller stringing a half-made garland.",
+    think:"Can something that lasts only a day create a memory that lasts forever?" },
+  3: { num:"EXHIBIT 03", title:"The Tailor", role:"The Architect of Clothes",
+    says:"My art is turning fabric into clothes that fit.",
+    story:"I take measurements, mark the fabric, cut it, and stitch it together. Every person is different, so I pay attention to the smallest details. One small change can make a big difference in how a garment fits. For me, tailoring is about turning a simple piece of fabric into something made just for someone.",
+    tools:"Measuring tape, scissors, chalk and sewing machine.", skill:"Making clothes fit each person properly.",
+    artwork:"The tailor stitching fabric at his machine.",
+    think:"How much skill goes into the clothes we wear every day?" },
+  4: { num:"EXHIBIT 04", title:"The Kulfi Seller", role:"The Keeper of Sweet Memories",
+    says:"My art is making a taste people remember.",
+    story:"I prepare the mixture, fill the moulds, and wait for the kulfi to freeze. I know how to remove it without breaking its shape. For me, it is not just about selling something sweet. Many people come back because my kulfi reminds them of childhood, summer holidays, and time spent with family.",
+    tools:"Kulfi moulds, sticks and an ice box.", skill:"Making kulfi with the right taste and texture.",
+    artwork:"The kulfi seller easing a kulfi from its mould.",
+    think:"How can one taste bring back so many memories?" },
+  5: { num:"EXHIBIT 05", title:"The Bangle Seller", role:"The Artist of Colour",
+    says:"My art is helping people find the right colours.",
+    story:"I arrange bangles by colour, size, and style. I help people choose combinations for different outfits and occasions. Some customers know exactly what they want, while others ask me to help them decide. For me, matching bangles is more than selling them. It is about helping someone find something that feels right for them.",
+    tools:"Bangles, display stands and boxes.", skill:"Matching colours and helping customers choose.",
+    artwork:"The bangle seller holding up a bangle for a customer.",
+    think:"How can something as small as a bangle express someone\u2019s personality?" }
+};
+var current = 1, lastFocus = null;
+var overlay = document.getElementById("overlay");
+function frameSVG(n){
+  var btn = document.querySelector('.frame[data-open="'+n+'"]');
+  return btn ? btn.innerHTML : "";
+}
+function openExhibit(n){
+  current = ((n - 1 + 5) % 5) + 1;
+  var e = EXHIBITS[current];
+  lastFocus = document.activeElement;
+  document.getElementById("sheet-num").textContent = e.num;
+  document.getElementById("sheet-title").textContent = e.title;
+  document.getElementById("sheet-role").textContent = e.role;
+  document.getElementById("sheet-says").textContent = "\u201C" + e.says + "\u201D";
+  document.getElementById("sheet-story").textContent = e.story;
+  document.getElementById("sheet-tools").textContent = e.tools;
+  document.getElementById("sheet-skill").textContent = e.skill;
+  document.getElementById("sheet-think").textContent = e.think;
+  document.getElementById("sheet-cap").textContent = "Artwork: " + e.artwork;
+  document.getElementById("sheet-art").innerHTML = frameSVG(current);
+  overlay.classList.add("open");
+  document.body.style.overflow = "hidden";
+  document.getElementById("closeBtn").focus();
+}
+function closeExhibit(){
+  overlay.classList.remove("open");
+  document.body.style.overflow = "";
+  if (lastFocus && lastFocus.focus) lastFocus.focus();
+}
+var openers = document.querySelectorAll("[data-open]");
+for (var i = 0; i < openers.length; i++){
+  openers[i].addEventListener("click", function(){ openExhibit(parseInt(this.getAttribute("data-open"), 10)); });
+}
+document.getElementById("closeBtn").addEventListener("click", closeExhibit);
+document.getElementById("prevBtn").addEventListener("click", function(){ openExhibit(current - 1); });
+document.getElementById("nextBtn").addEventListener("click", function(){ openExhibit(current + 1); });
+overlay.addEventListener("click", function(ev){ if (ev.target === overlay) closeExhibit(); });
+document.addEventListener("keydown", function(ev){
+  if (!overlay.classList.contains("open")) return;
+  if (ev.key === "Escape") closeExhibit();
+  else if (ev.key === "ArrowRight") openExhibit(current + 1);
+  else if (ev.key === "ArrowLeft") openExhibit(current - 1);
+});
 </script>
 </body>
 </html>
